@@ -1,6 +1,9 @@
 package app;
 
-public class PessoaJuridica {
+import java.time.LocalDate;
+
+
+public class PessoaJuridica extends Pessoa {
     
     private String nome;
     private String endereco;
@@ -10,34 +13,9 @@ public class PessoaJuridica {
 
 
     public PessoaJuridica(String nome, String endereco, LocalDate dataCriacao, String nomeFantasia, String cnpj) {
-        this.setNome(nome);
-        this.setEndereco(endereco);
-        this.dataCriacao = dataCriacao;
-        this.setnomeFantasia(nomeFantasia);
-        this.setcnpj(cnpj); 
     
-     public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome; 
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setdataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
+        this.setnomeFantasia(nomeFantasia);
+        this.setCnpj(cnpj);
     }
 
     public String nomeFantasia() {
@@ -45,4 +23,18 @@ public class PessoaJuridica {
     }
 
     public void setnomeFantasia(String nomeFantasia) {
-       
+        this.nomeFantasia = nomeFantasia;
+    }
+
+    public String cnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+    @override
+    public String exibirInformacoes() {
+        return " Nome:" + nome + " endereço:" + endereco + " data de Criacao:" + dataCriacao + " nomeFantasia:" + nomeFantasia + " CNPJ:" + cnpj;
+    } 
+}

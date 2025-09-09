@@ -19,5 +19,17 @@ public class Main {
     
     System.out.println(pf.exibirInformacoes());
     
-    }
+    PessoaJuridica pj = new PessoaJuridica("Daniel" , "Rua com nome", LocalDate.of(2006,Month.NOVEMBER, 01), "Nome Fantasia", "1234567895");
+    
+    System.out.println(pj.exibirInformacoes());
+
+    Pessoa p1 = pf;
+
+    System.out.println(p1.exibirInformacoes());
+    
+    p1 = pj;
+
+    System.out.println(p1.exibirInformacoes());
+
+     }
 }
