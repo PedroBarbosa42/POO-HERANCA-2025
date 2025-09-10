@@ -7,7 +7,6 @@ public abstract class Pessoa {
     private String endereco;
     private LocalDate dataCriacao;
 
-    }
 
     public String getNome() {
         return nome;

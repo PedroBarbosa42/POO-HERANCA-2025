@@ -30,12 +30,15 @@ public class PessoaFisica extends Pessoa {
     public void setCpf (String cpf) {
         this.cpf = cpf;
     }
-    @override
+
+    @Override
     public String exibirInformacoes() {
-        DateTimeForatter formatador = DateTimeForatter.ofParttern
-        return " Nome:" + nome + " Endereço:" + endereco + " Data de Criacao:" + dataCriacao + " Data de Nascimento:" + dataNascimento + " CPF:" + cpf;
-    } 
-
+        return "--- Informações da Pessoa Física ---\n" +
+                "Nome: " + this.getNome() + "\n" +
+                "Data de Nascimento: " + this.getDataNascimento().format(formatador) + "\n" +
+                "Endereço: " + this.getEndereco() + "\n" +
+                "CPF: " + this.getCpf() + "\n" +
+                "------------------------------------";
+    }
 }
-
 
