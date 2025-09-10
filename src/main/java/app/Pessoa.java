@@ -7,13 +7,12 @@ public abstract class Pessoa {
     private String endereco;
     private LocalDate dataCriacao;
 
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome; 
+        this.nome = nome;
     }
 
     public String getEndereco() {
@@ -24,13 +23,13 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
 
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
     public LocalDate getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setdataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
-    public abstract String exibirInforamcoes();
+    public abstract String exibirInformacoes();
 }

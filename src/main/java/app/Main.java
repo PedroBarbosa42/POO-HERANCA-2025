@@ -15,21 +15,27 @@ public class Main {
 
         // System.out.println(tarefas[0].getDescricao());
 
-    PessoaFisica pf = new PessoaFisica("Pedro" , "Rua sem nome",LocalDate.now(), LocalDate.of(2006,Month.NOVEMBER, 01),"1234567895");
-    
-    System.out.println(pf.exibirInformacoes());
-    
-    PessoaJuridica pj = new PessoaJuridica("Daniel" , "Rua com nome", LocalDate.of(2006,Month.NOVEMBER, 01), "Nome Fantasia", "1234567895");
-    
-    System.out.println(pj.exibirInformacoes());
+        PessoaFisica pf = new PessoaFisica(
+            "Pedro",
+            "Rua Sem Nome, 0",
+            LocalDate.of(2006, Month.NOVEMBER, 01),
+            "1234323455");
+        
+        System.out.println(pf.exibirInformacoes());
 
-    Pessoa p1 = pf;
+        PessoaJuridica pj = new PessoaJuridica(
+            "FATEC",
+            "Av. Shunji Nishimura",
+            "FATEC Pompéia",
+            "12312314000123");
+        
+        System.out.println(pj.exibirInformacoes());
 
-    System.out.println(p1.exibirInformacoes());
-    
-    p1 = pj;
+        Pessoa p1 = pf;
+        System.out.println(p1.exibirInformacoes());
 
-    System.out.println(p1.exibirInformacoes());
-
-     }
+        p1 = pj;
+        System.out.println(p1.exibirInformacoes());
+        
+    }
 }
